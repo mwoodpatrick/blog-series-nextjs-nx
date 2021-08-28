@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import styles from './index.module.css';
 
 export function Index() {
@@ -19,7 +21,9 @@ export function Index() {
           {' '}
           If you like Nx, please give it a star:
           <div className="github-star-badge">
-            <img src="/star.svg" className="material-icons" alt="" />
+            <Image src="/star.svg" alt="Landscape picture"
+            width={24} height={24}
+            />
             Star
           </div>
         </a>
