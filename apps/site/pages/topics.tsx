@@ -1,5 +1,5 @@
 import './topics.module.css';
-import { TopicButton } from '@juridev/shared/ui';
+import { TopicButton } from '@westie/shared/ui';
 
 /* eslint-disable-next-line */
 export interface TopicsProps {}
