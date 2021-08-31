@@ -25,6 +25,9 @@
     }
   },
   "projects": {
+    "api": {
+      "tags": []
+    },
     "markdown": {
       "tags": []
     },
