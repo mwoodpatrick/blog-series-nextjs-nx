@@ -20,7 +20,7 @@ export default function Home({ countries }) {
         </h1>
 
         <p className={styles.description}>
-          Staically rendered during build to change edit {" "}
+          Statically rendered during build to change edit {" "}
           <code className={styles.code}>pages/index.ts</code>
         </p>
 

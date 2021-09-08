@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@juridev/graphql": ["libs/graphql/src/index.ts"],
+      "@westie/graphql": ["libs/graphql/src/index.ts"],
+      "@westie/apollo-multi-endpoint-link": [
+        "libs/apollo-multi-endpoint-link/src/index.ts"
+      ],
       "@westie/markdown": ["libs/markdown/src/index.ts"],
       "@westie/shared/mdx-elements": ["libs/shared/mdx-elements/src/index.ts"],
       "@westie/shared/ui": ["libs/shared/ui/src/index.ts"]

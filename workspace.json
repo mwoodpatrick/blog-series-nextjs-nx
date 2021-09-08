@@ -7,7 +7,16 @@
   "generators": {
     "@nrwl/react": {
       "application": {
+        "style": "css",
+        "linter": "eslint",
         "babel": true
+      },
+      "component": {
+        "style": "css"
+      },
+      "library": {
+        "style": "css",
+        "linter": "eslint"
       }
     },
     "@nrwl/next": {
@@ -68,6 +77,27 @@
         }
       }
     },
+    "apollo-multi-endpoint-link": {
+      "root": "libs/apollo-multi-endpoint-link",
+      "sourceRoot": "libs/apollo-multi-endpoint-link/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/apollo-multi-endpoint-link/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/apollo-multi-endpoint-link"],
+          "options": {
+            "jestConfig": "libs/apollo-multi-endpoint-link/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "graphql": {
       "root": "libs/graphql",
       "sourceRoot": "libs/graphql/src",
@@ -106,6 +136,107 @@
           "options": {
             "jestConfig": "libs/markdown/jest.config.js",
             "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "multi-end-point": {
+      "root": "apps/multi-end-point",
+      "sourceRoot": "apps/multi-end-point/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/web:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/multi-end-point",
+            "index": "apps/multi-end-point/src/index.html",
+            "main": "apps/multi-end-point/src/main.tsx",
+            "polyfills": "apps/multi-end-point/src/polyfills.ts",
+            "tsConfig": "apps/multi-end-point/tsconfig.app.json",
+            "assets": [
+              "apps/multi-end-point/src/favicon.ico",
+              "apps/multi-end-point/src/assets"
+            ],
+            "styles": ["apps/multi-end-point/src/styles.css"],
+            "scripts": [],
+            "webpackConfig": "@nrwl/react/plugins/webpack"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/multi-end-point/src/environments/environment.ts",
+                  "with": "apps/multi-end-point/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/web:dev-server",
+          "options": {
+            "buildTarget": "multi-end-point:build",
+            "hmr": true
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "multi-end-point:build:production",
+              "hmr": false
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/multi-end-point/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/multi-end-point"],
+          "options": {
+            "jestConfig": "apps/multi-end-point/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "multi-end-point-e2e": {
+      "root": "apps/multi-end-point-e2e",
+      "sourceRoot": "apps/multi-end-point-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/multi-end-point-e2e/cypress.json",
+            "devServerTarget": "multi-end-point:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "multi-end-point:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/multi-end-point-e2e/**/*.{js,ts}"]
           }
         }
       }

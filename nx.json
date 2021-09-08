@@ -28,11 +28,21 @@
     "api": {
       "tags": []
     },
+    "apollo-multi-endpoint-link": {
+      "tags": []
+    },
     "graphql": {
       "tags": []
     },
     "markdown": {
       "tags": []
+    },
+    "multi-end-point": {
+      "tags": []
+    },
+    "multi-end-point-e2e": {
+      "tags": [],
+      "implicitDependencies": ["multi-end-point"]
     },
     "shared-mdx-elements": {
       "tags": []
