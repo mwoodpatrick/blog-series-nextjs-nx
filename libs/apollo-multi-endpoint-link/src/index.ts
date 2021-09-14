@@ -1,2 +1,1 @@
-export { MultiAPILink } from './MultiAPILink'
-export { MultiAPILinkConfig } from './interface'
+export * from './lib/apollo-multi-endpoint-link';

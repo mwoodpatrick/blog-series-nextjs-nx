@@ -49,7 +49,7 @@ function tsxFromError(error)
 
 function ExchangeRates() {
   const query = gql`
-    query Rates @api(contextKey: "apiName") {
+    query Rates @api(name: "rates") {
       rates(currency: "USD") {
         currency
         ratep
@@ -57,9 +57,7 @@ function ExchangeRates() {
     }
   `;
 
-  const { loading, error, data } = useQuery(query, {
-    context: { apiName: 'rates' },
-  });
+  const { loading, error, data } = useQuery(query);
 
   if (loading) {
     return <p>Loading...</p>;

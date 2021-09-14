@@ -1,7 +1,7 @@
 {
   "configurations": [
     {
-      "name": "Launch Edge",
+      "name": "Launch Funky Edge",
       "request": "launch",
       "type": "pwa-msedge",
       "url": "http://localhost:4200",
@@ -62,9 +62,37 @@
       "sourceMaps": true,
       "breakOnLoad": true,
       "sourceMapPathOverrides": {
-          "webpack:///./src/*": "${webRoot}/dist/*",
-          "webpack:///src/*": "${webRoot}/dist/*"
+        "webpack:///./src/*": "${webRoot}/dist/*",
+        "webpack:///src/*": "${webRoot}/dist/*"
       }
+    },
+    {
+      "name": "Debug Jest Tests",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": [
+        "--inspect-brk",
+        "${workspaceRoot}/node_modules/jest/bin/jest.js",
+        "--runInBand"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229
+    }
+    {
+      "name": "Debug tests single run",
+      "type": "node",
+      "request": "launch",
+      // "env": { "CI": "true" },
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/jest",
+      "runtimeArgs": ["--inspect-brk",
+        "--runInBand",
+        "--no-cache",
+        "--testNamePattern=Mark"],
+      "cwd": "${workspaceRoot}",
+      "protocol": "inspector",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
     }
   ]
 }
