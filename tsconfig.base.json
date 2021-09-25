@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@westie/markdown": ["libs/markdown/src/index.ts"],
+      "@westie/reactui": ["libs/reactui/src/index.ts"],
       "@westie/shared/mdx-elements": ["libs/shared/mdx-elements/src/index.ts"],
       "@westie/shared/ui": ["libs/shared/ui/src/index.ts"]
     }
