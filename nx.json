@@ -20,44 +20,9 @@
           "test",
           "e2e",
           "build-storybook"
-        ]
+        ],
+        "parallel": 1
       }
-    }
-  },
-  "projects": {
-    "markdown": {
-      "tags": []
-    },
-    "react-app": {
-      "tags": []
-    },
-    "react-app-e2e": {
-      "tags": [],
-      "implicitDependencies": ["react-app"]
-    },
-    "reactui": {
-      "tags": []
-    },
-    "shared-mdx-elements": {
-      "tags": []
-    },
-    "shared-ui": {
-      "tags": []
-    },
-    "site": {
-      "tags": [],
-      "implicitDependencies": ["site-articles"]
-    },
-    "site-articles": {
-      "tags": []
-    },
-    "site-e2e": {
-      "tags": [],
-      "implicitDependencies": ["site"]
-    },
-    "storybook-e2e-ui-e2e": {
-      "tags": [],
-      "implicitDependencies": ["shared-ui"]
     }
   },
   "targetDependencies": {
@@ -67,5 +32,31 @@
         "projects": "dependencies"
       }
     ]
-  }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/next"
+  },
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "style": "css",
+        "linter": "eslint",
+        "babel": true
+      },
+      "component": {
+        "style": "css"
+      },
+      "library": {
+        "style": "css",
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/next": {
+      "application": {
+        "style": "css",
+        "linter": "eslint"
+      }
+    }
+  },
+  "defaultProject": "site"
 }
