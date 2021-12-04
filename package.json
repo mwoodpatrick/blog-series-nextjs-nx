@@ -61,6 +61,7 @@
     "cypress": "^7.3.0",
     "dotenv": "10.0.0",
     "eslint": "7.22.0",
+    "eslint-config-next": "11.1.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
     "eslint-plugin-import": "2.22.1",
@@ -71,8 +72,6 @@
     "prettier": "2.3.2",
     "ts-jest": "26.5.5",
     "ts-node": "~9.1.1",
-    "typescript": "4.3.5",
-    "eslint-config-next": "11.1.0"
+    "typescript": "4.3.5"
   }
 }
-
