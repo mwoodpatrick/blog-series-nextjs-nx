@@ -14,20 +14,9 @@
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "parallel": 1
       }
-    }
-  },
-  "projects": {
-    "markdown": {
-      "tags": []
-    },
-    "site": {
-      "tags": []
-    },
-    "site-e2e": {
-      "tags": [],
-      "implicitDependencies": ["site"]
     }
   },
   "targetDependencies": {
@@ -37,5 +26,22 @@
         "projects": "dependencies"
       }
     ]
-  }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/next"
+  },
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "babel": true
+      }
+    },
+    "@nrwl/next": {
+      "application": {
+        "style": "css",
+        "linter": "eslint"
+      }
+    }
+  },
+  "defaultProject": "site"
 }

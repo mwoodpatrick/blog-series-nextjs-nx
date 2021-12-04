@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@juridev/markdown": ["libs/markdown/src/index.ts"]
+      "@westie/markdown": ["libs/markdown/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

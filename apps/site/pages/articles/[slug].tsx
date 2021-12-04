@@ -8,7 +8,7 @@ import {
   getParsedFileContentBySlug,
   renderMarkdown,
   MarkdownRenderingResult,
-} from '@juridev/markdown';
+} from '@westie/markdown';
 
 interface ArticleProps extends ParsedUrlQuery {
   slug: string;

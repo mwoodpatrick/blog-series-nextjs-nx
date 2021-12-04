@@ -1,22 +1,5 @@
 {
   "version": 2,
-  "cli": {
-    "defaultCollection": "@nrwl/next"
-  },
-  "defaultProject": "site",
-  "generators": {
-    "@nrwl/react": {
-      "application": {
-        "babel": true
-      }
-    },
-    "@nrwl/next": {
-      "application": {
-        "style": "css",
-        "linter": "eslint"
-      }
-    }
-  },
   "projects": {
     "markdown": {
       "root": "libs/markdown",
@@ -37,7 +20,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "site": {
       "root": "apps/site",
@@ -88,7 +72,8 @@
             "lintFilePatterns": ["apps/site/**/*.{ts,tsx,js,jsx}"]
           }
         }
-      }
+      },
+      "tags": []
     },
     "site-e2e": {
       "root": "apps/site-e2e",
@@ -114,7 +99,9 @@
             "lintFilePatterns": ["apps/site-e2e/**/*.{js,ts}"]
           }
         }
-      }
+      },
+      "tags": [],
+      "implicitDependencies": ["site"]
     }
   }
 }
