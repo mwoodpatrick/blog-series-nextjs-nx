@@ -1,20 +1,28 @@
 {
   "migrations": [
     {
+      "version": "13.3.0-beta.0",
+      "description": "@nrwl/workspace:tsc is now @nrwl/js:tsc",
       "cli": "nx",
-      "version": "12.8.0-beta.0",
-      "description": "Remove Typescript Preprocessor Plugin",
-      "factory": "./src/migrations/update-12-8-0/remove-typescript-plugin",
-      "package": "@nrwl/cypress",
-      "name": "remove-typescript-plugin"
+      "implementation": "./src/migrations/update-13-3-0/update-tsc-executor-location",
+      "package": "@nrwl/workspace",
+      "name": "13-3-0-tsc-location"
     },
     {
       "cli": "nx",
-      "version": "12.8.0-beta.11",
-      "description": "Adjust the Next.js lib babel configuration for styled-jsx",
-      "factory": "./src/migrations/update-12-8-0/remove-styled-jsx-babel-plugin",
-      "package": "@nrwl/next",
-      "name": "fix-nextjs-lib-babel-config-12.8.0"
+      "version": "13.3.0-beta.0",
+      "description": "Update eslint-rules jest.config.js in order to support ESLint v8 exports mapping, remove category field",
+      "factory": "./src/migrations/update-13-3-0/eslint-8-updates",
+      "package": "@nrwl/linter",
+      "name": "eslint-8-updates"
+    },
+    {
+      "cli": "nx",
+      "version": "13.3.0-beta.1",
+      "description": "Rename the 'package' executor to 'rollup'",
+      "factory": "./src/migrations/update-13-3-0/rename-package-to-rollup",
+      "package": "@nrwl/web",
+      "name": "rename-package-to-rollup"
     }
   ]
 }
