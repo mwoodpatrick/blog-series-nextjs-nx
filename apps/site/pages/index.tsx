@@ -3,6 +3,9 @@ import Image from 'next/image'
 import styles from './index.module.css';
 
 export function Index() {
+console.log("got here");
+debugger; // eslint-disable-line no-debugger
+
   /*
    * Replace the elements below with your own.
    *
