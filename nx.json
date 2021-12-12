@@ -27,9 +27,6 @@
       }
     ]
   },
-  "cli": {
-    "defaultCollection": "@nrwl/next"
-  },
   "generators": {
     "@nrwl/react": {
       "application": {
@@ -43,5 +40,8 @@
       }
     }
   },
-  "defaultProject": "site"
+  "defaultProject": "site",
+  "cli": {
+    "defaultCollection": "@nrwl/next"
+  }
 }
