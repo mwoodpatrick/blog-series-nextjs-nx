@@ -1,6 +1,8 @@
 import styles from './index.module.css';
 
 export function Index() {
+  // console.log("got here");
+  // debugger; // eslint-disable-line no-debugger
   return (
     <>
       <div className="bg-gray-50">
