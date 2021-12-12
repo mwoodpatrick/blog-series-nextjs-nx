@@ -34,7 +34,6 @@
     "core-js": "^3.6.5",
     "document-register-element": "1.13.1",
     "gray-matter": "^4.0.3",
-    "next-mdx-remote": "^3.0.4",
     "next-remote-watch": "^1.0.0",
     "next": "12.0.0",
     "postcss": "^8.3.2",
@@ -42,7 +41,8 @@
     "react-dom": "17.0.2",
     "regenerator-runtime": "0.13.7",
     "tailwindcss": "^2.1.4",
-    "tslib": "^2.0.0"
+    "tslib": "^2.0.0",
+    "next-mdx-remote": "^3.0.2"
   },
   "devDependencies": {
     "@babel/core": "7.12.13",
