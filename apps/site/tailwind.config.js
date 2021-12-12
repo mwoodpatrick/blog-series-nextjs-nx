@@ -2,7 +2,6 @@ const { createGlobPatternsForDependencies } = require('@nrwl/next/tailwind');
 const { join } = require('path');
 
 module.exports = {
-  /* JIT is currently in preview mode */
   mode: 'jit',
   presets: [require('../../tailwind-workspace-preset.js')],
   purge: [
