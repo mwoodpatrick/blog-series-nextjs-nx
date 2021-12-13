@@ -7,9 +7,9 @@ import {
   getParsedFileContentBySlug,
   renderMarkdown,
   MarkdownRenderingResult,
-} from '@juridev/markdown';
+} from '@westie/markdown';
 import { MDXRemote } from 'next-mdx-remote';
-import { mdxElements } from '@juridev/shared/mdx-elements';
+import { mdxElements } from '@westie/shared/mdx-elements';
 
 interface ArticleProps extends ParsedUrlQuery {
   slug: string;
